@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationsample.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_bottomSheetSampleFragment"
+            app:destination="@id/bottomSheetSampleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.navigationsample.fragments.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_upLevelFragment"
+            app:destination="@id/upLevelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.navigationsample.fragments.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_upLevelFragment"
+            app:destination="@id/upLevelFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_bottomSheetSampleFragment"
+            app:destination="@id/bottomSheetSampleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.navigationsample.fragments.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <dialog
+        android:id="@+id/bottomSheetSampleFragment"
+        android:name="com.example.navigationsample.fragments.SampleBottomSheetFragment"
+        android:label="fragment_bottom_sheet_sample"
+        tools:layout="@layout/fragment_sample_bottom_sheet">
+        <action
+            android:id="@+id/action_bottomSheetSampleFragment_self"
+            app:destination="@id/bottomSheetSampleFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/upLevelFragment"
+        android:name="com.example.navigationsample.fragments.UpLevelFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_up_level">
+        <argument
+            android:name="title"
+            android:defaultValue="Title"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
