@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="24dp"
-                android:text="Replace Fragment"
+                android:text="Navigate to Fragment"
                 android:textColor="@android:color/white"
                 app:strokeColor="@android:color/white"
                 app:strokeWidth="2dp" />

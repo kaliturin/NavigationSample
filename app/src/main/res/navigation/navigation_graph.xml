@@ -54,7 +54,9 @@
             app:destination="@id/bottomSheetSampleFragment" />
         <argument
             android:name="name"
-            app:argType="string" />
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
     </dialog>
 
     <fragment
@@ -62,6 +64,14 @@
         android:name="com.example.navigationsample.fragments.UpLevelFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_up_level">
+        <argument
+            android:name="withParentToolbar"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="withParentBottomMenu"
+            android:defaultValue="false"
+            app:argType="boolean" />
         <argument
             android:name="title"
             android:defaultValue="Title"

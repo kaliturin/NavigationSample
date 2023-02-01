@@ -23,14 +23,26 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonDynamicTitleNavigate"
+        android:id="@+id/buttonNavigateToFragment"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tilDynamicTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Navigate"
+        android:text="Navigate to fragment with bottom menu"
+        app:strokeColor="@color/purple_700"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNavigateToFragment2"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonNavigateToFragment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Navigate to fragment without bottom menu"
         app:strokeColor="@color/purple_700"
         app:strokeWidth="2dp" />
 
