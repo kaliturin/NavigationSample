@@ -13,10 +13,21 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonDynamicTitleNavigate.setOnClickListener {
+
+        binding.buttonNavigateToFragment.setOnClickListener {
             findNavController().navigate(
                 SearchFragmentDirections.actionSearchFragmentToUpLevelFragment(
-                    binding.editTextTitle.text.toString()
+                    title = binding.editTextTitle.text.toString(),
+                    withParentToolbar = true,
+                    withParentBottomMenu = true,
+                )
+            )
+        }
+
+        binding.buttonNavigateToFragment2.setOnClickListener {
+            findNavController().navigate(
+                SearchFragmentDirections.actionSearchFragmentToUpLevelFragment(
+                    title = binding.editTextTitle.text.toString()
                 )
             )
         }

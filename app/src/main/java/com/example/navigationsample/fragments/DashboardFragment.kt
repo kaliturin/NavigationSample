@@ -22,7 +22,9 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         binding.buttonReplaceFragment.setOnClickListener {
             findNavController().navigate(
                 DashboardFragmentDirections.actionDashboardFragmentToUpLevelFragment(
-                    "Replaced"
+                    withParentToolbar = true,
+                    withParentBottomMenu = true,
+                    title = "Replaced fragment"
                 )
             )
         }
